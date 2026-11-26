@@ -1775,3 +1775,99 @@ footer {
     gap: 20px;
   }
 }
+
+/* hero: content-height instead of full viewport, code card fills the right side */
+.landing-page-container {
+  height: auto;
+  min-height: 0;
+  padding: 90px 10% 60px;
+  gap: 50px;
+}
+.landing-page-container .text-content {
+  width: 55%;
+}
+.hero-card {
+  width: 40%;
+  max-width: 520px;
+  background: #181826;
+  border: 1px solid #2e2e46;
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+.hero-card-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 18px;
+  background: #1c1c2c;
+  border-bottom: 1px solid #26263a;
+}
+.hero-card-bar i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #ff5f57;
+}
+.hero-card-bar i:nth-child(2) { background: #febc2e; }
+.hero-card-bar i:nth-child(3) { background: #28c840; }
+.hero-card-bar span {
+  margin-left: 10px;
+  font-size: 1.3rem;
+  color: #8a8aa6;
+}
+.hero-card pre {
+  margin: 0;
+  padding: 24px 26px 28px;
+  font-family: "Fira Code", ui-monospace, monospace;
+  font-size: 1.55rem;
+  line-height: 1.75;
+  color: #e6e6f0;
+  white-space: pre;
+}
+.hero-card .k { color: #c77dff; }
+.hero-card .s { color: #5ec5ff; }
+.hero-card .n { color: #28c840; }
+@media screen and (max-width: 1000px) {
+  .hero-card { display: none; }
+  .landing-page-container .text-content { width: 80%; }
+}
+
+/* footer: size to its content instead of a full-viewport band */
+.footer-background {
+  position: absolute;
+  inset: 0;
+  height: auto;
+}
+.footer-foreground {
+  position: relative;
+  z-index: 2;
+  height: auto;
+  padding-top: 100px;
+}
+@media screen and (max-width: 768px) {
+  .landing-page-container { padding-top: 30px; }
+}
+
+/* about: less empty space above the heading, avatar instead of photo */
+.about-section-container { padding-top: 110px; }
+.dp img { height: auto; }
+
+/* header: solid band behind the fixed navbar so scrolled content doesn't show through */
+header::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 125px;
+  background: linear-gradient(to bottom, var(--color-dark-mode) 85%, transparent);
+  z-index: 998;
+  pointer-events: none;
+}
+.navbar {
+  background-color: var(--color-dark-mode);
+}
+@media screen and (max-width: 768px) {
+  header::before { height: 110px; }
+}
