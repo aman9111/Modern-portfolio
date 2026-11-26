@@ -32,6 +32,7 @@
   <!-- google fonts-->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" />
+</head>
 
 <body class="body">
   <audio loop="" id="audioPlayer" style="display: none">
@@ -291,27 +292,27 @@
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/jslogo.png" alt="js skill" class="tech-stack-logo" />
+              <img src="./src/png/jslogo.png" alt="javascript skill" class="tech-stack-logo" />
               <span class="tooltip">JAVA SCRIPT</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/typescript.png" alt="js skill" class="tech-stack-logo" />
+              <img src="./src/png/typescript.png" alt="typescript skill" class="tech-stack-logo" />
               <span class="tooltip">TYPE SCRIPT</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/Amazon_Web_Services_Logo_PNG(12).png" alt="js skill" class="tech-stack-logo" />
+              <img src="./src/png/Amazon_Web_Services_Logo_PNG(12).png" alt="aws skill" class="tech-stack-logo" />
               <span class="tooltip">AWS</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/images.png" alt="photoshop skill" class="tech-stack-logo" />
+              <img src="./src/png/images.png" alt="angular skill" class="tech-stack-logo" />
               <span class="tooltip">ANGULAR</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/node.png" alt="photoshop skill" class="tech-stack-logo" />
+              <img src="./src/png/node.png" alt="node.js skill" class="tech-stack-logo" />
               <span class="tooltip">NODE</span>
             </li>
 
@@ -547,41 +548,6 @@
     }
   </script>
 
-  <script>
-    const cursorInner = document.getElementById("cursor-inner");
-    const cursorOuter = document.getElementById("cursor-outer");
-    const links = document.querySelectorAll("a,label,button");
-
-    document.addEventListener("mousemove", function (e) {
-      const posX = e.clientX;
-      const posY = e.clientY;
-
-      // cursorInner.style.left = `${posX}px`;
-      // cursorInner.style.top = `${posY}px`;
-
-      // cursorOuter.style.left = `${posX}px`;
-      // cursorOuter.style.top = `${posY}px`;
-
-      cursorOuter?.animate(
-        // {
-        //   left: `${posX}px`,
-        //   top: `${posY}px`,
-        // },
-        { duration: 500, fill: "forwards" }
-      );
-
-      links.forEach((link) => {
-        link.addEventListener("mouseenter", () => {
-          cursorInner?.classList.add("hover");
-          cursorOuter?.classList.add("hover");
-        });
-        link.addEventListener("mouseleave", () => {
-          cursorInner?.classList.remove("hover");
-          cursorOuter?.classList.remove("hover");
-        });
-      });
-    });
-  </script>
 </body>
 
 </html>
