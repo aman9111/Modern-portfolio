@@ -1856,3 +1856,21 @@ header::before {
 @media screen and (max-width: 768px) {
   header::before { height: 110px; }
 }
+.ai-tools-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 30px;
+  padding: 0;
+  list-style: none;
+}
+.ai-tool-chip {
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: 1px solid var(--tech-stack-box-border-color);
+  background-image: linear-gradient(to bottom right, var(--tech-stack-box-first-color), var(--tech-stack-box-second-color));
+  color: var(--color-white);
+  font-family: "Fira Code", ui-monospace, monospace;
+  font-size: 1.6rem;
+}

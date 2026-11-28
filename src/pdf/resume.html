@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- Source of Aman-Agrawal-Resume.pdf. Rebuild the PDF with:
+     google-chrome --headless --no-pdf-header-footer --virtual-time-budget=5000 --print-to-pdf=Aman-Agrawal-Resume.pdf resume.html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aman Agrawal — Resume</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400&family=Inter:ital,wght@0,400;0,600;1,400&display=swap" />
+  <style>
+    @page { size: A4; margin: 16mm 15mm; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, sans-serif; font-size: 11pt; line-height: 1.55; color: #1a1a1a; }
+    h1, h2, h3 { font-family: "Source Serif 4", Georgia, serif; font-weight: 400; margin: 0; }
+    h1 { font-size: 24pt; line-height: 1.2; }
+    h2 { font-size: 16pt; margin: 20px 0 8px; }
+    h3 { font-size: 12.5pt; margin: 14px 0 6px; }
+    p { margin: 6px 0; }
+    a { color: #1a5fd0; }
+    .role { font-weight: 600; margin-top: 4px; }
+    ul { margin: 6px 0; padding-left: 22px; }
+    li { margin: 3px 0; }
+    b { font-weight: 600; }
+    .stack { font-style: italic; }
+    .job { margin: 10px 0 4px; }
+    .break { break-before: page; }
+  </style>
+</head>
+<body>
+  <h1>Aman Agrawal</h1>
+  <p class="role">Software Engineer — Frontend (Angular, React) · Backend (Python, FastAPI)</p>
+  <p>Indore, India · +91 91111 71813 · amanagrawal9111@gmail.com ·
+    <a href="https://linkedin.com/in/amanagrawal9111">linkedin.com/in/amanagrawal9111</a> ·
+    <a href="https://aman9111.github.io/Modern-portfolio">aman9111.github.io/Modern-portfolio</a></p>
+
+  <h2>Summary</h2>
+  <p>Software engineer with ~3 years building AI-powered insurtech products end to end. Angular and React on the
+    frontend, Python (FastAPI, SQLAlchemy, PostgreSQL) on the backend. Shipped document-processing, claims and
+    underwriting apps for health and life insurers, deployed with Docker, Jenkins and Kubernetes.</p>
+
+  <h2>Skills</h2>
+  <ul>
+    <li><b>Frontend:</b> Angular (up to v22), React 19, Next.js, TypeScript, JavaScript, RxJS, NgRx, Redux, CSS/SASS,
+      Tailwind CSS, PrimeReact, MUI, D3.js, Micro-frontends</li>
+    <li><b>Backend:</b> Python, Django REST Framework, Celery, Redis, FastAPI, SQLAlchemy, Alembic, Pydantic, JWT auth;
+      Node.js, NestJS, Express, GraphQL, Socket.IO</li>
+    <li><b>Data &amp; AI:</b> PostgreSQL, pgvector, RAG, embeddings, OpenAI-compatible LLM APIs, OCR (Tesseract, AWS
+      Textract), scikit-learn, AWS Rekognition and Transcribe</li>
+    <li><b>AI Tools:</b> Claude Code, GitHub Copilot, Cursor, ChatGPT · ElevenLabs, Kling, Google Flow, Higgsfield</li>
+    <li><b>DevOps &amp; Testing:</b> Docker, Docker Compose, Kubernetes, Helm, Jenkins CI/CD, Nginx, Git · Playwright
+      (E2E), Jest, Jasmine, Karma</li>
+  </ul>
+
+  <h2>Experience</h2>
+  <p class="job"><b>InsuranceDekho (formerly RenewBuy / Artivatic.ai) — Software Engineer</b> · Jan 2024 – Present · Indore</p>
+
+  <h3>Leadership &amp; Ownership</h3>
+  <ul>
+    <li><b>Lead frontend engineer:</b> own the frontend of five products (Alfred, API marketplace, underwriting, health
+      rule engine, document intelligence) from architecture to release, running several projects in parallel.</li>
+    <li><b>Frontend standards:</b> set the project structure, reusable component patterns and CI/CD deployment, and led
+      the Angular 22 upgrade.</li>
+  </ul>
+
+  <h3 class="break">ITGI Health-Claims Platform (Alfred)</h3>
+  <p class="stack">Angular 22, TypeScript, RxJS, NgRx, SCSS · Python, Django REST Framework, Celery, Redis · Docker,
+    Jenkins CI/CD · Playwright</p>
+  <ul>
+    <li>Owned ITGI claim-adjudication features end to end, Angular frontend plus Django REST APIs: CTQ fields review and
+      edit, barcode status with failure reasons, PED analysis with ICD codes, lab master and lab relevancy.</li>
+    <li>Built permission-based access control for AV Folder tabs, driven by login permissions in DRF serializers and
+      covered by unit tests.</li>
+    <li>Built fault-tolerant retry for failed ITGI claim decisions: a Celery scheduled task with a feature-flag switch
+      and unit tests.</li>
+    <li>Built the AI-assisted claim-review UI: OCR previews (AWS Textract), auto-classification (AWS Rekognition),
+      transcripts (AWS Transcribe) and GPT summarisation.</li>
+    <li>Migrated the app from Angular 12 to 22, removed vulnerable dependencies, fixed Docker builds on Node 24, and
+      added multi-tenant config to onboard a second insurer.</li>
+  </ul>
+
+  <h3>AI Document Intelligence (GenAI, RAG)</h3>
+  <p class="stack">React 19, TypeScript, Vite · Python, FastAPI, SQLAlchemy, Alembic, Pydantic · PostgreSQL, pgvector ·
+    Docker Compose, Nginx</p>
+  <ul>
+    <li>Built a full-stack GenAI app: upload PDF, DOCX and images, then chat with them through RAG with page-level
+      citations and streamed LLM responses.</li>
+    <li>Built the document-processing pipeline: text extraction and OCR (Tesseract, Poppler, pypdf, python-docx),
+      chunking, vector embeddings (fastembed, BGE-small) and hybrid search (pgvector semantic search plus PostgreSQL
+      full-text search).</li>
+    <li>Built an ML page classifier for 19 document types: TF-IDF plus linear SVM on OCR text, fused with SigLIP 2 image
+      embeddings (ONNX) and logistic regression, with confidence flags and human-in-the-loop feedback, no
+      retraining.</li>
+  </ul>
+
+  <p class="job"><b>Frenz Intelligence — Associate Engineer</b> · Jan 2023 – Jan 2024 · Indore</p>
+  <ul>
+    <li>Built responsive Angular and React components for an OTT content-discovery platform (web and mobile).</li>
+    <li>Shipped AI-driven recommendations, real-time search and community features.</li>
+  </ul>
+
+  <h2>Education</h2>
+  <ul>
+    <li><b>B.Tech</b>, Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore · 2023 · CGPA 7.8</li>
+    <li><b>HSC (12th)</b>, Shri Kalyan Academy, Indore</li>
+  </ul>
+</body>
+</html>
